@@ -24,7 +24,7 @@ class MenuItem(TranslatableModel, MP_Node):
         null=True,
         blank=True
     )
-    url = models.URLField(null=True, blank=True)
+    url = models.CharField(max_length=200, null=True, blank=True)
     target = models.CharField(
         verbose_name=_('Target'),
         choices=enums.TARGET_CHOICES,
